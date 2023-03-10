@@ -13,3 +13,8 @@ Reasons for automating this -
 - Although seems unreasonable, this tool is not for replacing human judgement but to assist!
 - Since the Database in this assgn. is the same and the resulting output tables remain the same for every assignment, this route of automating the assignment checks seemed right
 
+
+How to use this - 
+- Have python 3.11 installed and pip install requirements.txt
+
+Reachout to me if you need to use this for your benefit
