@@ -21,7 +21,7 @@ def convert_pymysql_types(data):
 
 
 # Load the Excel sheet and extract the SQL statements
-wb = openpyxl.load_workbook('query_excel_file_Micheal_Standwood.xlsx')
+wb = openpyxl.load_workbook('query_excel_file.xlsx')
 ws = wb.active
 queries = []
 for cell in ws['A']:
