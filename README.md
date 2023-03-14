@@ -9,6 +9,7 @@ What does this Assistant do?
 - This python code, interacts with MySQL and the corresponding DB, executes the queries sent by students and validates them by comparing the output tables.
 
 ![image](https://user-images.githubusercontent.com/122895165/224374343-5f11a8d6-b573-498b-ac6a-5484bde68161.png)
+![image](https://user-images.githubusercontent.com/122895165/225081444-a89a1d8b-566d-4355-a879-efdc6fb9c7fe.png)
 ![image](https://user-images.githubusercontent.com/122895165/225074727-2d36ade6-e844-439d-8ef3-79e10c2fc5c8.png)
 ![image](https://user-images.githubusercontent.com/122895165/225074867-be4eebad-4db6-4708-9988-853c31d10771.png)
 
