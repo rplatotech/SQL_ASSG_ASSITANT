@@ -2,6 +2,8 @@ import openpyxl as openpyxl
 import pymysql.cursors
 import decimal
 import datetime
+import os
+
 
 # Define a converter function to convert pymysql data types to Python built-in types
 
@@ -20,18 +22,40 @@ def convert_pymysql_types(data):
         return str(data)
 
 
+# Get the path to the MySQL log file
+data_dir = "../../AppData/Roaming/MySQL/Workbench/log\\"
+log_path = os.path.join(data_dir, "sql_actions_Local_instance_MySQL80.log")
+
+# Read the log file and print its contents
+def sql_logs_reader():
+    ins_upd_del_list = []
+    with open(log_path, 'r+') as f:
+        log = f.readlines()
+        for line in log:
+            if '1 row(s) affected' in line:
+                # print(line[14:])
+                ins_upd_del_list.append(str(line[14:]))
+    print(ins_upd_del_list)
+    return ins_upd_del_list
+
+sql_logs_reader()
+def sql_logs_clear():
+    with open(log_path, 'r+') as f:
+        f.truncate(0)
+        f.write("Log file cleared.\n")
+
 # Load the Excel sheet and extract the SQL statements
 wb = openpyxl.load_workbook('query_excel_file.xlsx')
 ws = wb.active
 queries = []
 for cell in ws['A']:
-    if cell.value.startswith('SELECT') or cell.value.startswith('select'):
+    if cell.value:
         queries.append(cell.value)
 
 # Define the database connection parameters
 host = '127.0.0.1'
 user = 'root'
-password = 'your-password'
+password = 'Azxsw21q!'
 database = 'sql_invoicing'
 
 # Connect to the database
