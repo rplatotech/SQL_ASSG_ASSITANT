@@ -365,6 +365,10 @@ el3_q10 = [
      '2019-11-23', '2019-12-13', 'None']]
 
 # ASSIGNMENT 4 - el4_q1 to el4_q3 is INSERT, UPDATE and DELETE. Manual TCs
+el4_q1 = "INSERT INTO sql_invoicing.clients (client_iD, name, address, city, state, phone) VALUES (6, " \
+         "'Dominos', '40 Bluestem Parkway', 'Savannah', 'GA', '412-234-6789'): 1 row(s) affected\n"
+el4_q2 = "UPDATE sql_invoicing.clients SET state='FL' where client_id=6: 1 row(s) affected\n"
+el4_q3 = 'DELETE from sql_invoicing.clients where client_id=6: 1 row(s) affected\n'
 
 el4_q4 = [['1', 'Processed', 'P'], ['2', 'Shipped', 'S'], ['3', 'Delivered', 'D']]
 el4_q5 = [['VINTE', '3 NEVADA PARKWAY', 'SYRACUSE', 'NY'],
