@@ -55,7 +55,7 @@ for cell in ws['A']:
 # Define the database connection parameters
 host = '127.0.0.1'
 user = 'root'
-password = 'Azxsw21q!'
+password = 'password'
 database = 'sql_invoicing'
 
 # Connect to the database
